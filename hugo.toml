@@ -1,11 +1,11 @@
 baseURL = 'https://hk-id.github.io/'
-title = 'hk-id'
+title = '香港身份 HKID 之旅'
 languageCode = 'zh-CN'
 defaultContentLanguage = 'zh-cn'
 relativeURLs = true
 
 [params]
-  description = 'hk-id 的香港身份之旅 —— 从非永居走向永居的图文记录：所经历的，所思考的，所想象的，所计划的，以及它们变成现实的样子。'
+  description = '香港身份 HKID 之旅 —— 从非永居走向永居的图文记录：所经历的，所思考的，所想象的，所计划的，以及它们变成现实的样子。'
   author = 'hk-id'
 
 [markup.goldmark.renderer]
