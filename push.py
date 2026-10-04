@@ -20,6 +20,7 @@ HOSTS = ["api.github.com"]
 REPO = "LXCHK/lxchk.github.io"
 ROOT = os.path.expanduser("~/workspace/cnid-site")
 SKIP_DIRS = {"public", ".git"}
+SKIP_FILES = {".hugo_build.lock"}
 
 
 def api(method, path, payload=None):
@@ -79,6 +80,8 @@ def main():
     for dirpath, dirnames, filenames in os.walk(ROOT):
         dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS]
         for fn in sorted(filenames):
+            if fn in SKIP_FILES:
+                continue
             local = os.path.join(dirpath, fn)
             repo_path = os.path.relpath(local, ROOT).replace(os.sep, "/")
             push_file(local, repo_path)
