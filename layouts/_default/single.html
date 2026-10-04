@@ -1,0 +1,11 @@
+{{ define "main" }}
+<article class="post">
+  <h1>{{ .Title }}</h1>
+  <p class="meta"><time>{{ .Date.Format "2006年01月02日" }}</time>{{ with .Params.tags }}　{{ range . }}<span class="tag">{{ . }}</span>{{ end }}{{ end }}</p>
+  <div class="content">{{ .Content }}</div>
+  <nav class="post-nav">
+    {{ with .PrevInSection }}<a class="prev" href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ end }}
+    {{ with .NextInSection }}<a class="next" href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ end }}
+  </nav>
+</article>
+{{ end }}
