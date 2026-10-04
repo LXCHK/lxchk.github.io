@@ -1,0 +1,76 @@
+:root {
+  --ink: #1c1a17;
+  --muted: #8a8478;
+  --paper: #fdfcf8;
+  --line: #e9e2d5;
+  --accent: #b03a2e;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  line-height: 1.9;
+  font-size: 17px;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* header */
+.site-header { border-bottom: 1px solid var(--line); background: var(--paper); }
+.header-inner { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+.brand { font-size: 22px; font-weight: 700; letter-spacing: 2px; border: none; font-family: Georgia, "Noto Serif SC", serif; }
+.site-header nav a { margin-left: 22px; font-size: 15px; color: var(--muted); border: none; }
+.site-header nav a:hover { color: var(--accent); }
+
+/* hero */
+.hero { text-align: center; padding: 72px 0 48px; }
+.hero h1 {
+  font-family: Georgia, "Noto Serif SC", "Songti SC", serif;
+  font-size: 34px; margin: 0 0 16px; letter-spacing: 4px; font-weight: 600;
+}
+.tagline { color: var(--muted); font-size: 15px; max-width: 560px; margin: 0 auto; line-height: 2; }
+
+/* timeline */
+.timeline h2, .page-title {
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: 20px; letter-spacing: 6px; color: var(--muted);
+  border-bottom: 1px solid var(--line); padding-bottom: 12px; margin: 32px 0 8px;
+}
+.tl-item { display: flex; gap: 20px; padding: 22px 0; border-bottom: 1px dashed var(--line); }
+.tl-item time { flex: 0 0 104px; color: var(--muted); font-size: 14px; padding-top: 4px; font-variant-numeric: tabular-nums; }
+.tl-item h3 { margin: 0 0 6px; font-size: 19px; }
+.tl-item h3 a { border: none; }
+.tl-item p { margin: 0; color: var(--muted); font-size: 15px; }
+.empty { color: var(--muted); }
+
+/* post list */
+.post-list { list-style: none; padding: 0; }
+.post-list li { padding: 10px 0; border-bottom: 1px dashed var(--line); display: flex; gap: 18px; }
+.post-list time { color: var(--muted); font-size: 14px; flex: 0 0 104px; font-variant-numeric: tabular-nums; }
+.post-list a { border: none; }
+
+/* article */
+.post h1 { font-family: Georgia, "Noto Serif SC", serif; font-size: 28px; line-height: 1.5; margin: 40px 0 8px; }
+.post .meta { color: var(--muted); font-size: 14px; margin: 0 0 32px; }
+.tag { display: inline-block; border: 1px solid var(--line); border-radius: 12px; padding: 0 10px; font-size: 13px; margin-right: 6px; color: var(--muted); }
+.post .content { margin-bottom: 48px; }
+.post .content img { max-width: 100%; height: auto; border-radius: 6px; margin: 18px 0; }
+.post .content h2 { font-size: 21px; margin: 40px 0 12px; }
+.post .content blockquote { border-left: 3px solid var(--accent); margin: 24px 0; padding: 4px 0 4px 18px; color: var(--muted); }
+.post-nav { display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid var(--line); padding-top: 20px; margin-bottom: 56px; font-size: 15px; }
+.post-nav a { border: none; color: var(--muted); }
+.post-nav a:hover { color: var(--accent); }
+
+/* footer */
+.site-footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 28px 0 40px; text-align: center; color: var(--muted); font-size: 13px; }
+.site-footer p { margin: 4px 0; }
+.mirror { letter-spacing: 1px; }
+
+@media (max-width: 560px) {
+  .hero h1 { font-size: 26px; }
+  .tl-item time, .post-list time { flex-basis: 88px; }
+}
