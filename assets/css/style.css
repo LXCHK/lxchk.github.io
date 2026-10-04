@@ -58,6 +58,9 @@ a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .tl-item time { flex: 0 0 104px; color: var(--muted); font-size: 14px; padding-top: 4px; font-variant-numeric: tabular-nums; }
 .tl-item h3 { margin: 0 0 6px; font-size: 19px; }
 .tl-item h3 a { border: none; }
+.tl-headings { list-style: none; margin: 6px 0 0; padding: 0; }
+.tl-headings li { font-size: 14px; color: var(--muted); padding: 2px 0; }
+.tl-headings li::before { content: "· "; }
 .tl-item p { margin: 0; color: var(--muted); font-size: 15px; }
 .empty { color: var(--muted); }
 
