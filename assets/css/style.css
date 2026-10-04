@@ -22,7 +22,8 @@ a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 /* header */
 .site-header { border-bottom: 1px solid var(--line); background: var(--paper); }
 .header-inner { display: flex; justify-content: space-between; align-items: center; height: 64px; }
-.brand { font-size: 22px; font-weight: 700; letter-spacing: 2px; border: none; font-family: Georgia, "Noto Serif SC", serif; }
+.brand { font-size: 22px; font-weight: 700; letter-spacing: 2px; border: none; font-family: Georgia, "Noto Serif SC", serif; display: inline-flex; align-items: center; gap: 10px; }
+.brand-logo { width: 34px; height: 34px; }
 .site-header nav a { margin-left: 22px; font-size: 15px; color: var(--muted); border: none; }
 .site-header nav a:hover { color: var(--accent); }
 
