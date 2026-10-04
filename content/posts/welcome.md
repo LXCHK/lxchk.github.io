@@ -19,6 +19,6 @@ tags: [建站小记]
 
 ## 更新方式
 
-日常想到什么就发文字和图片过来，整理成文章后发布。站点在 GitHub Pages（`hk-id.github.io`）和 Cloudflare Pages（`hk-id.pages.dev`）双站同步更新。
+日常想到什么就发文字和图片过来，整理成文章后发布。站点在 GitHub Pages（`hkid0.github.io`）和 Cloudflare Pages（`hkid0.pages.dev`）双站同步更新。
 
 七年很长，慢慢写。
