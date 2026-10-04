@@ -1,10 +1,39 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="{{ "/" | relURL }}"><img class="brand-logo" src="{{ "favicon.svg" | relURL }}" alt="香港身份 HKID 之旅">香港身份 HKID 之旅</a>
-    <nav>
-      <a href="{{ "/" | relURL }}">首页</a>
-      <a href="{{ "/posts/" | relURL }}">文章</a>
-      <a href="{{ "/about/" | relURL }}">关于</a>
-    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <button class="drawer-close" id="drawerClose" aria-label="关闭菜单">×</button>
+  <nav>
+    <a href="{{ "/" | relURL }}">首页</a>
+    <a href="{{ "/posts/" | relURL }}">文章</a>
+    <a href="{{ "/about/" | relURL }}">关于</a>
+  </nav>
+</aside>
+<script>
+(function(){
+  var btn = document.getElementById('menuBtn'),
+      drawer = document.getElementById('drawer'),
+      overlay = document.getElementById('drawerOverlay'),
+      closeBtn = document.getElementById('drawerClose');
+  function open(){
+    drawer.classList.add('open'); overlay.classList.add('show');
+    btn.setAttribute('aria-expanded','true'); drawer.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function shut(){
+    drawer.classList.remove('open'); overlay.classList.remove('show');
+    btn.setAttribute('aria-expanded','false'); drawer.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+  btn.addEventListener('click', open);
+  closeBtn.addEventListener('click', shut);
+  overlay.addEventListener('click', shut);
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') shut(); });
+})();
+</script>
