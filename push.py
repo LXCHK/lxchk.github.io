@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Push every file under ~/workspace/cnid-site (except public/) to the
-LXCHK/lxchk.github.io repo via the GitHub Contents API, using the stored
+hk-id/hk-id.github.io repo via the GitHub Contents API, using the stored
 custom.github credential. Idempotent-ish: skips files that already exist with
 identical content (avoids needing shas for updates in this simple flow by
 fetching sha when a file exists)."""
@@ -17,7 +17,7 @@ from dynamic_credentials import add_surrogate_to_request, read_json_response
 
 CRED = "custom.github"
 HOSTS = ["api.github.com"]
-REPO = "LXCHK/lxchk.github.io"
+REPO = "hk-id/hk-id.github.io"
 ROOT = os.path.expanduser("~/workspace/cnid-site")
 SKIP_DIRS = {"public", ".git"}
 SKIP_FILES = {".hugo_build.lock"}
