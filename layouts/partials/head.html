@@ -1,7 +1,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ if .IsHome }}{{ .Site.Title }}｜香港身份之旅{{ else }}{{ .Title }}｜{{ .Site.Title }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}｜{{ .Site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <link rel="icon" href="{{ "favicon.svg" | relURL }}">
 {{ $css := resources.Get "css/style.css" | minify | fingerprint }}
