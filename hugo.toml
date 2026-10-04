@@ -6,7 +6,7 @@ relativeURLs = true
 
 [params]
   description = '香港身份 HKID 从 0 出发 —— 从非永居走向永居的图文记录：所经历的，所思考的，所想象的，所计划的，以及它们变成现实的样子。'
-  author = 'hk-id'
+  author = 'hkid0'
 
 [markup.goldmark.renderer]
   unsafe = true
