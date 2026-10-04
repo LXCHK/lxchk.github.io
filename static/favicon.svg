@@ -1,1 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#fdfcf8"/><circle cx="32" cy="32" r="18" fill="none" stroke="#b03a2e" stroke-width="4"/><circle cx="32" cy="32" r="5" fill="#b03a2e"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D42A2A"/>
+      <stop offset="1" stop-color="#A8141F"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <g fill="#FFFFFF">
+    <ellipse cx="32" cy="18.5" rx="8" ry="11"/>
+    <ellipse cx="32" cy="18.5" rx="8" ry="11" transform="rotate(72 32 32)"/>
+    <ellipse cx="32" cy="18.5" rx="8" ry="11" transform="rotate(144 32 32)"/>
+    <ellipse cx="32" cy="18.5" rx="8" ry="11" transform="rotate(216 32 32)"/>
+    <ellipse cx="32" cy="18.5" rx="8" ry="11" transform="rotate(288 32 32)"/>
+  </g>
+  <polygon fill="#FFDE00" points="32,25 33.65,29.73 38.66,29.84 34.66,32.87 36.11,37.66 32,34.8 27.89,37.66 29.34,32.87 25.34,29.84 30.35,29.73"/>
+</svg>
