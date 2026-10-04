@@ -11,7 +11,14 @@
     <time>{{ .Date.Format "2006-01-02" }}</time>
     <div class="tl-body">
       <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      {{ $hs := findRE "(?s)<h2[^>]*>.*?</h2>" .Content }}
+      {{ if $hs }}
+      <ul class="tl-headings">
+        {{ range $hs }}<li>{{ . | plainify }}</li>{{ end }}
+      </ul>
+      {{ else }}
       <p>{{ .Summary }}</p>
+      {{ end }}
     </div>
   </article>
   {{ else }}
