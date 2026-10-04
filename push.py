@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Push every file under ~/workspace/hk-id-site (except public/) to the
+"""Push every file under ~/workspace/hkid0-site (except public/) to the
 hkid0/hkid0.github.io repo via the GitHub Contents API, using the stored
 custom.github credential. Idempotent-ish: skips files that already exist with
 identical content (avoids needing shas for updates in this simple flow by
@@ -18,7 +18,7 @@ from dynamic_credentials import add_surrogate_to_request, read_json_response
 CRED = "custom.github"
 HOSTS = ["api.github.com"]
 REPO = "hkid0/hkid0.github.io"
-ROOT = os.path.expanduser("~/workspace/hk-id-site")
+ROOT = os.path.expanduser("~/workspace/hkid0-site")
 SKIP_DIRS = {"public", ".git"}
 SKIP_FILES = {".hugo_build.lock"}
 
